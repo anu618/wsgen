@@ -1,0 +1,120 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    background: white;
+    padding: 20mm;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden; /* Prevent content from bleeding out */
+    margin: 10mm; /* Outer spacing around the page border */
+    position: relative;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.brand-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.worksheet-title {
+    font-size: 28px; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    color: #e67e22; /* Bright orange */
+    text-transform: uppercase; /* Change case to all caps */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 3px solid #e67e22; /* Wide border around the title */
+    display: inline-block; /* Ensure the border wraps around the text */
+    border-radius: 5px; /* Add some rounding to the border */
+}
+
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items in the center */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+.header-item {
+    display: flex;
+    align-items: center; /* Align items in the center */
+}
+
+.header-item label {
+    font-size: 16px;
+    margin-right: 5px; /* Add some space between label and input */
+    color: #e67e22; /* Use the same title color */
+    font-weight: bold; /* Make the label bold */
+    text-transform: uppercase; /* Change case to all caps */
+}
+
+.header-item input {
+    font-size: 16px;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 2px solid #bdc3c7;
+    width: 120px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.header-item input#name {
+    width: 200px; /* Longer underline for Name */
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 10px; /* Space between cells */
+    margin-bottom: 20mm; /* Leave space for footer */
+}
+
+.question {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-end; /* Bottom align the items */
+    padding: 10px;
+    font-size: 24px;
+    color: #2c3e50;
+    border: 2px solid #3498db; /* Blue border for questions */
+    border-radius: 4px;
+    background-color: transparent; /* Remove cell shading */
+    width: 100%; /* Ensure the question takes full width of the column */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    white-space: nowrap; /* Prevent word wrapping */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.question:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.answer {
+    display: inline-block;
+    width: 60px;
+    border-bottom: 2px solid #2c3e50;
+    margin-left: 5px; /* Bring the underline closer to the equal sign */
+    background-color: transparent; /* Remove cell shading */
+    text-align: center;
+    vertical-align: bottom; /* Align the answer underline to the bottom */
+}
